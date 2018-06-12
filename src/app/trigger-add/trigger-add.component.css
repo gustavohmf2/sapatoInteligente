@@ -1,0 +1,45 @@
+.peso-no-visibile {
+    visibility: hidden;
+    display: none;
+}
+
+.peso-visibile {
+    visibility: visible;
+    display: inline;
+}
+
+.pressao-no-visibile {
+    visibility: hidden;
+    display: none;
+}
+
+.pressao-visibile {
+    visibility: visible;
+    display: inline;
+}
+
+.percurso-no-visibile {
+    visibility: hidden;
+    display: none;
+}
+
+.percurso-visibile {
+    visibility: visible;
+    display: inline;
+}
+
+#content {
+    width: 472px;
+    margin: 0 auto;
+}
+img {
+    border: none;
+}
+
+rect {
+	transition: .6s fill;
+	fill: #D3D3D3;
+}
+rect:hover {
+	fill: #22aa22;
+}

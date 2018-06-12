@@ -1,0 +1,171 @@
+<h1>Novo Gatilho</h1>
+<div class="container">
+    <form>
+      
+      <div class="form-group">
+        <label for="name">Nome</label>
+        <input type="text" class="form-control" id="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="name">Descrição</label>
+        <input type="text" class="form-control" id="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">cliente</label>
+        <select class="form-control" id="exampleFormControlSelect1">
+          <option>Selecionar</option>
+          <option>José</option>
+          <option>Márcia</option>
+        </select>
+      </div>
+      
+
+      <div class="form-group">
+        <label for="name">Tipo</label>
+          <select  #selectOption class="custom-select" id="inputGroupSelect01" (change)="changeOption(selectOption.value)">
+            <option selected>Selecionar</option>
+            <option value="1">Peso</option>
+            <option value="2">Pressão nos pés</option>
+            <option value="3">Percurso</option>
+          </select>
+      </div>
+
+      <div [ngClass]="{'peso-no-visibile': !peso, 'peso-visibile': peso}">
+          <h3>Gatilho de Peso</h3>
+          <div class="form-group">
+            <label for="alterEgo">Peso Máximo</label>
+            <input type="number" class="form-control" id="alterEgo">
+          </div>
+      </div>
+
+      <div [ngClass]="{'pressao-no-visibile': !pressao, 'pressao-visibile': pressao}">
+          <h3>Gatilho de Pressão nos pés</h3>
+          <div class="form-group">
+            <label for="alterEgo">Distribuição da carga</label>
+            <div class="row">
+                <div class="form-group">
+                    <label for="alterEgo">Tempo</label>
+                    <input type="number" class="form-control" id="alterEgo">
+                  </div>
+            </div>
+            <div class="row">
+              
+                <div class="col-3">
+                    <h3>Pé esquerdo</h3>
+                    <div class="form-group">
+                      <label for="alterEgo">superior esquerdo</label>
+                      <input type="number" class="form-control" id="alterEgo">
+                    </div>
+                    <div class="form-group">
+                      <label for="alterEgo">superior direito</label>
+                      <input type="number" class="form-control" id="alterEgo">
+                    </div>
+                    <div class="form-group">
+                      <label for="alterEgo">central esquerdo</label>
+                      <input type="number" class="form-control" id="alterEgo">
+                    </div>
+                    <div class="form-group">
+                      <label for="alterEgo">central direito</label>
+                      <input type="number" class="form-control" id="alterEgo">
+                    </div>
+                    <div class="form-group">
+                      <label for="alterEgo">inferior esquerdo</label>
+                      <input type="number" class="form-control" id="alterEgo">
+                    </div>
+                    <div class="form-group">
+                      <label for="alterEgo">inferio esquerdo</label>
+                      <input type="number" class="form-control" id="alterEgo">
+                    </div>
+                    
+                </div>
+                <div class="col-6">
+                   <div id="content">
+                      
+                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 808" >
+                        <image width="1200" height="808" xlink:href="https://cdn.icon-icons.com/icons2/37/PNG/512/humanfootprintsontheapplication_thefoot_humano_huellas_2934.png">
+                        </image>
+                        <a xlink:href="#">
+                          <rect x="200" y="0" fill="#fff" opacity="0.5" width="200" height="270" />
+                        </a>
+                        <a xlink:href="#">
+                          <rect x="400" y="0" fill="#fff" opacity="0.5" width="200" height="270" />
+                      </a>
+                      <a xlink:href="#">
+                          <rect x="200" y="271" fill="#fff" opacity="0.5" width="200" height="270" />
+                      </a>
+                      <a xlink:href="#">    
+                          <rect x="400" y="271" fill="#fff" opacity="0.5" width="200" height="270" />
+                      </a>
+                      <a xlink:href="#">
+                          <rect x="200" y="542" fill="#fff" opacity="0.5" width="200" height="270" />
+                      </a>
+                      <a xlink:href="#">
+                          <rect x="400" y="542" fill="#fff" opacity="0.5" width="200" height="270" />
+                      </a>
+                          <rect x="600" y="0" fill="#fff" opacity="0.5" width="200" height="270" />
+                          <rect x="800" y="0" fill="#fff" opacity="0.5" width="200" height="270" />
+                          <rect x="600" y="271" fill="#fff" opacity="0.5" width="200" height="270" />
+                          <rect x="800" y="271" fill="#fff" opacity="0.5" width="200" height="270" />
+                          <rect x="600" y="542" fill="#fff" opacity="0.5" width="200" height="270" />
+                          <rect x="800" y="542" fill="#fff" opacity="0.5" width="200" height="270" />
+                      </svg>
+                  </div>
+                    
+                </div>
+                <div class="col-3">
+                    <h3>Pé direito</h3>
+                    <div class="form-group">
+                      <label for="alterEgo">superior esquerdo</label>
+                      <input type="number" class="form-control" id="alterEgo">
+                    </div>
+                    <div class="form-group">
+                      <label for="alterEgo">superior direito</label>
+                      <input type="number" class="form-control" id="alterEgo">
+                    </div>
+                    <div class="form-group">
+                      <label for="alterEgo">central esquerdo</label>
+                      <input type="number" class="form-control" id="alterEgo">
+                    </div>
+                    <div class="form-group">
+                      <label for="alterEgo">central direito</label>
+                      <input type="number" class="form-control" id="alterEgo">
+                    </div>
+                    <div class="form-group">
+                      <label for="alterEgo">inferior esquerdo</label>
+                      <input type="number" class="form-control" id="alterEgo">
+                    </div>
+                    <div class="form-group">
+                      <label for="alterEgo">inferio esquerdo</label>
+                      <input type="number" class="form-control" id="alterEgo">
+                    </div>
+                    
+                </div>
+            </div>
+            
+          </div>
+      </div>
+
+      <div [ngClass]="{'percurso-no-visibile': !percurso, 'percurso-visibile': percurso}">
+          <h3>Gatilho de Percurso</h3>
+          <div class="form-group">
+              <label for="alterEgo">Período</label>
+              <input type="number" class="form-control" id="alterEgo">
+            </div>
+          <div class="form-group">
+            <label for="alterEgo">Distância máxima permitida</label>
+            <input type="number" class="form-control" id="alterEgo">
+          </div>
+          <div class="form-group">
+              <label for="alterEgo">Distância mínima permitida</label>
+              <input type="number" class="form-control" id="alterEgo">
+            </div>
+      </div>
+      
+      
+ 
+      <button type="submit" class="btn btn-success">Salvar</button>
+ 
+    </form>
+</div>
