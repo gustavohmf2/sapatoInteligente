@@ -1,15 +1,19 @@
 import { GatilhoPeso } from "./gatilhoPeso";
 import { GatilhoPercurso } from "./gatilhosPercurso";
-import { GatilhoPe } from "./gatilhoPe";
+import { GatilhoPressao } from "./gatilhoPressao";
+import { SapatoInteligente } from "./sapatoInteligente";
+import { Notificacao } from "./notificacao";
 
 export class Cliente {
 
     nome:String;
     dataNascimento:Date;
     idSapato:String;
-    doenca:String[];
+    notificacoes: Notificacao[];
+    peso: number;
+    sapatoInteligente:SapatoInteligente;
     g1:GatilhoPeso[];
-    g2:GatilhoPe[];
+    g2:GatilhoPressao[];
     g3:GatilhoPercurso[];
 
 }

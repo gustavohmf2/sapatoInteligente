@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Cliente } from '../models/cliente';
+import { ClientServiceService } from '../services/client-service.service';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 
 
 @Component({
@@ -13,43 +15,30 @@ export class ClientManagerComponent implements OnInit {
 
 
 
-  constructor() { 
+  constructor(private clienteService: ClientServiceService,
+    private router: Router) { 
 
-    this._clientes = [
-      {
-        nome: 'Geraldo',
-        dataNascimento: new Date('1990-04-12'),
-        doenca: ['dsds'],
-        idSapato: 'id-00000000001', 
-        g1:null,
-        g2:null,
-        g3:null,
+    this.clienteService.listPaciente().subscribe(
+      (clientes) => {
+        this._clientes = clientes;
       },
-      {
-        nome: 'Maria',
-        dataNascimento: new Date('1950-04-20'),
-        doenca: ['dsds'],
-        idSapato: 'id-0000000002', 
-        g1:null,
-        g2:null,
-        g3:null,
-      },
-      {
-        nome: 'Geraldo',
-        dataNascimento: new Date('1984-05-21'),
-        doenca: ['dsds'],
-        idSapato: 'id-0000000003', 
-        g1:null,
-        g2:null,
-        g3:null,
-      }
-    ];
+      () => console.log("Faill")
+    );
+
   }
+
+  editarPaciente(cliente:Cliente) {
+
+    this.router.navigate(['novoGatilho',cliente]);
+
+  }
+
 
   ngOnInit() {
   }
 
   get clientes() {
+    console.log(this._clientes);
     return this._clientes;
   }
 }

@@ -1,30 +1,35 @@
 <h1>Novo Gatilho</h1>
 <div class="container">
-    <form>
+    <form #myForm="ngForm" > 
       
       <div class="form-group">
-        <label for="name">Nome</label>
-        <input type="text" class="form-control" id="name" required>
+        <label for="idSapato">Id_sapato</label>
+        <input type="text" class="form-control" id="idSapato" required [(ngModel)]="gatilho.idSapato"> 
       </div>
 
       <div class="form-group">
-        <label for="name">Descrição</label>
-        <input type="text" class="form-control" id="name" required>
+        <label for="name">Nome</label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="gatilho.nome">
       </div>
 
+      <div class="form-group">
+        <label for="descricao">Descrição</label>
+        <input type="text" class="form-control" id="descricao" required [(ngModel)]="gatilho.descricao">
+      </div>
+
+      <!--
       <div class="form-group">
         <label for="exampleFormControlSelect1">cliente</label>
         <select class="form-control" id="exampleFormControlSelect1">
           <option>Selecionar</option>
-          <option>José</option>
-          <option>Márcia</option>
+          <option selected *ngFor="let cliente of clientes">{{cliente.nome}}</option>
         </select>
       </div>
-      
+      -->
 
       <div class="form-group">
-        <label for="name">Tipo</label>
-          <select  #selectOption class="custom-select" id="inputGroupSelect01" (change)="changeOption(selectOption.value)">
+        <label for="tipo">Tipo</label>
+          <select  #selectOption class="custom-select" id="tipo" name="tipo" (change)="changeOption(selectOption.value)" >
             <option selected>Selecionar</option>
             <option value="1">Peso</option>
             <option value="2">Pressão nos pés</option>
@@ -36,7 +41,7 @@
           <h3>Gatilho de Peso</h3>
           <div class="form-group">
             <label for="alterEgo">Peso Máximo</label>
-            <input type="number" class="form-control" id="alterEgo">
+            <input type="number" class="form-control" id="alterEgo" [(ngModel)]="gatilho.pesoMax">
           </div>
       </div>
 
@@ -47,7 +52,7 @@
             <div class="row">
                 <div class="form-group">
                     <label for="alterEgo">Tempo</label>
-                    <input type="number" class="form-control" id="alterEgo">
+                    <input type="number" class="form-control" id="alterEgo" [(ngModel)]="gatilho.tempo">
                   </div>
             </div>
             <div class="row">
@@ -56,27 +61,27 @@
                     <h3>Pé esquerdo</h3>
                     <div class="form-group">
                       <label for="alterEgo">superior esquerdo</label>
-                      <input type="number" class="form-control" id="alterEgo">
+                      <input type="number" class="form-control" id="alterEgo" [(ngModel)]="gatilho.e1">
                     </div>
                     <div class="form-group">
                       <label for="alterEgo">superior direito</label>
-                      <input type="number" class="form-control" id="alterEgo">
+                      <input type="number" class="form-control" id="alterEgo" [(ngModel)]="gatilho.e2">
                     </div>
                     <div class="form-group">
                       <label for="alterEgo">central esquerdo</label>
-                      <input type="number" class="form-control" id="alterEgo">
+                      <input type="number" class="form-control" id="alterEgo" [(ngModel)]="gatilho.e3">
                     </div>
                     <div class="form-group">
                       <label for="alterEgo">central direito</label>
-                      <input type="number" class="form-control" id="alterEgo">
+                      <input type="number" class="form-control" id="alterEgo" [(ngModel)]="gatilho.e4">
                     </div>
                     <div class="form-group">
                       <label for="alterEgo">inferior esquerdo</label>
-                      <input type="number" class="form-control" id="alterEgo">
+                      <input type="number" class="form-control" id="alterEgo" [(ngModel)]="gatilho.e5">
                     </div>
                     <div class="form-group">
                       <label for="alterEgo">inferio esquerdo</label>
-                      <input type="number" class="form-control" id="alterEgo">
+                      <input type="number" class="form-control" id="alterEgo" [(ngModel)]="gatilho.e6">
                     </div>
                     
                 </div>
@@ -118,27 +123,27 @@
                     <h3>Pé direito</h3>
                     <div class="form-group">
                       <label for="alterEgo">superior esquerdo</label>
-                      <input type="number" class="form-control" id="alterEgo">
+                      <input type="number" class="form-control" id="alterEgo" [(ngModel)]="gatilho.d1">
                     </div>
                     <div class="form-group">
                       <label for="alterEgo">superior direito</label>
-                      <input type="number" class="form-control" id="alterEgo">
+                      <input type="number" class="form-control" id="alterEgo" [(ngModel)]="gatilho.d2">
                     </div>
                     <div class="form-group">
                       <label for="alterEgo">central esquerdo</label>
-                      <input type="number" class="form-control" id="alterEgo">
+                      <input type="number" class="form-control" id="alterEgo" [(ngModel)]="gatilho.d3">
                     </div>
                     <div class="form-group">
                       <label for="alterEgo">central direito</label>
-                      <input type="number" class="form-control" id="alterEgo">
+                      <input type="number" class="form-control" id="alterEgo" [(ngModel)]="gatilho.d4">
                     </div>
                     <div class="form-group">
                       <label for="alterEgo">inferior esquerdo</label>
-                      <input type="number" class="form-control" id="alterEgo">
+                      <input type="number" class="form-control" id="alterEgo" [(ngModel)]="gatilho.d5">
                     </div>
                     <div class="form-group">
                       <label for="alterEgo">inferio esquerdo</label>
-                      <input type="number" class="form-control" id="alterEgo">
+                      <input type="number" class="form-control" id="alterEgo" [(ngModel)]="gatilho.d6">
                     </div>
                     
                 </div>
@@ -150,22 +155,22 @@
       <div [ngClass]="{'percurso-no-visibile': !percurso, 'percurso-visibile': percurso}">
           <h3>Gatilho de Percurso</h3>
           <div class="form-group">
-              <label for="alterEgo">Período</label>
-              <input type="number" class="form-control" id="alterEgo">
+              <label for="alterEgo">Tempo</label>
+              <input type="number" class="form-control" id="alterEgo" [(ngModel)]="gatilho.tempo">
             </div>
           <div class="form-group">
             <label for="alterEgo">Distância máxima permitida</label>
-            <input type="number" class="form-control" id="alterEgo">
+            <input type="number" class="form-control" id="alterEgo" [(ngModel)]="gatilho.distMax">
           </div>
           <div class="form-group">
               <label for="alterEgo">Distância mínima permitida</label>
-              <input type="number" class="form-control" id="alterEgo">
+              <input type="number" class="form-control" id="alterEgo" [(ngModel)]="gatilho.distMin">
             </div>
       </div>
       
       
  
-      <button type="submit" class="btn btn-success">Salvar</button>
+      <button type="submit" class="btn btn-success" (click)="cadastrar()" >Salvar</button>
  
     </form>
 </div>

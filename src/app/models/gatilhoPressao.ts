@@ -1,4 +1,4 @@
-export class GatilhoPe {
+export class GatilhoPressao {
     
     nome:String;
     descricao:String;

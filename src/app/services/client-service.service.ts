@@ -1,25 +1,28 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Cliente } from '../models/cliente';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ClientServiceService {
 
-  private _url = 'http://localhost/sapatainteligenteback/gatilhos'
-
+  private _url = 'http://localhost:8081/usuario';
+  
   constructor(private _http: HttpClient) { }
 
-  insert() {
+  insert(paciente) {
 
-    return this._http.post(this._url, {
-      'cliente': 'kl'
-    });
+    console.log(paciente);
+    return this._http.post(this._url+"/medico?idMedico=1", 
+      paciente
+    );
+   
   }
 
-  list() {
+  listPaciente() {
 
-    return this._http.get(this._url);
+    return this._http.get<Cliente[]>(this._url+"/paciente/medico?idMedico=1");
   }
 
 }
